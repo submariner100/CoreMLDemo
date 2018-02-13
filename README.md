@@ -1,6 +1,6 @@
 # CoreMLDemo
-From the Intro to Augmented Reality by Timothy Meixner
-Application implementing a machine learning model with CoreML and Vision that can do live predictions as well as Augmented Reality
+From the Intro to Augmented Reality by Timothy Meixner -  
+An Application implementing a machine learning model with CoreML and Vision that can do live predictions as well as Augmented Reality
 labels with ARKit that we are then able to add to identified objects.
 
 A user can pan with his camera and select objects in his view. The app will predict
