@@ -25,14 +25,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         
         // Set the view's delegate
-        sceneView.delegate = self
+		sceneView.delegate = self
         
         // Create a new scene
-        let scene = SCNScene()
+		let scene = SCNScene()
         
         // Set the scene to the view
-        sceneView.scene = scene
+		sceneView.scene = scene
 		sceneView.autoenablesDefaultLighting = true
+		initializeModel()
+		coreMLUpdate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,4 +65,34 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 		}
 	}
 	
+	func initializeModel() {
+		guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
+			print("Could not load the model")
+			return
+		}
+		
+		let classificationRequest = VNCoreMLRequest(model: model, completionHandler: classificationCompletionHandler)
+		classificationRequest.imageCropAndScaleOption = VNImageCropAndScaleOption.centerCrop
+		visionRequests = [classificationRequest]
+	}
+	
+	func classificationCompletionHandler(request: VNRequest, error: Error?) {
+		
+		
+	}
+	
+	func coreMLUpdate() {
+		coreMLQueue.async {
+			self.coreMLUpdate()
+		}
+	}
+	
 }
+
+
+
+
+
+
+
+
