@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="CoreMLDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cq3-JZ-9rQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdF-2w-vJ3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwW-rR-is0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.41371468321917809" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WSS-VI-JoD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG6-5m-6m1">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.41371468321917809" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ue9-pE-AC9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jwW-rR-is0" firstAttribute="leading" secondItem="cZf-tw-hWZ" secondAttribute="leading" id="4Nl-li-WCB"/>
+                            <constraint firstItem="jwW-rR-is0" firstAttribute="trailing" secondItem="cZf-tw-hWZ" secondAttribute="trailing" id="Inz-ce-yNz"/>
+                            <constraint firstItem="cZf-tw-hWZ" firstAttribute="trailing" secondItem="eG6-5m-6m1" secondAttribute="trailing" id="Prl-fI-ICd"/>
+                            <constraint firstItem="VdF-2w-vJ3" firstAttribute="bottom" secondItem="cZf-tw-hWZ" secondAttribute="bottom" id="dmY-fH-SUd"/>
+                            <constraint firstItem="eG6-5m-6m1" firstAttribute="leading" secondItem="cZf-tw-hWZ" secondAttribute="leading" id="htS-SX-RXu"/>
+                            <constraint firstItem="VdF-2w-vJ3" firstAttribute="trailing" secondItem="cZf-tw-hWZ" secondAttribute="trailing" id="jfQ-Ad-yPu"/>
+                            <constraint firstItem="jwW-rR-is0" firstAttribute="top" secondItem="Cq3-JZ-9rQ" secondAttribute="top" id="lXs-gd-R3c"/>
+                            <constraint firstItem="VdF-2w-vJ3" firstAttribute="leading" secondItem="cZf-tw-hWZ" secondAttribute="leading" id="xa9-jt-qg9"/>
+                            <constraint firstItem="eG6-5m-6m1" firstAttribute="bottom" secondItem="cZf-tw-hWZ" secondAttribute="bottom" id="yB8-Ot-yLh"/>
+                            <constraint firstItem="VdF-2w-vJ3" firstAttribute="top" secondItem="Cq3-JZ-9rQ" secondAttribute="top" id="z3o-vc-oQ2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cZf-tw-hWZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="predictionLabel" destination="eG6-5m-6m1" id="nOv-mO-K3s"/>
+                        <outlet property="sceneView" destination="VdF-2w-vJ3" id="fej-sh-c2j"/>
+                        <outlet property="statusLabel" destination="jwW-rR-is0" id="w6A-G9-kF8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
