@@ -13,5 +13,8 @@ secondcommit - Initializing the model. This application uses the Inceptionv3 mod
 framework to access this model. The method is called initializeModel() A update method is then implemented to constantly update the 
 current frame the camera is tracking.
 
+thirdcommit - touchesBegan method added and code written for the label identification of the objects the user highlights.
+
+This application is less then 250 lines of code 
 
 
